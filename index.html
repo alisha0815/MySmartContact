@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address book 2021</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/4d5ebfaa9c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="main.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+    </style>
+  </head>
+  <body>
+    <!-- nav_search, add -->
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <div class="logo">
+          <span class="logo__icon"><i class="fas fa-address-book"></i></span>
+          <span class="logo__title">MySmartContact</span>
+        </div>
+        <div class="add__contact">
+          <button class="add__btn">
+            <i class="fas fa-plus-circle"></i>
+            <span class="add__btn__text">ADD</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="search">
+        <div class="search__bar">
+          <input class="search__area" type="text" placeholder="Search..." />
+          <button type="submit" class="search__btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- contact list  -->
+    <section class="container">
+      <div class="contact__container">
+        <!-- list header -->
+        <!-- <div class="contact__header__row">
+          <div class="contact__header__firsttname">First Name</div>
+          <div class="contact__header__lastname">Last Name</div>
+          <div class="contact__header__mobile">
+            <i class="fas fa-mobile-alt"> Mobile</i>
+          </div>
+          <div class="contact__header__email">
+            <i class="far fa-envelope"> Email</i>
+          </div>
+          <div class="contact__header__address">
+            <i class="fas fa-home">Address</i>
+          </div>
+        </div>
+        <div class="contact__divider"></div> -->
+
+        <!-- list contact column -->
+        <!-- <div class="contacts__row">
+          <div class="contact__firsttname">Alisha</div>
+          <div class="contact__lastname">Greve</div>
+          <div class="contact__mobile">9854102</div>
+          <div class="contact__email">alisha</div>
+          <div class="contact__address">A0876 Oslo, Norway</div>
+        </div> -->
+      </div>
+      <!-- Add new contact -->
+      <div class="modal hidden">
+        <h3>Add new contact</h3>
+        <label for="new__first__name">First Name</label>
+        <input type="text" id="new__fist__name" />
+
+        <label for="new__last__name">Last Name</label>
+        <input type="text" id="new__last__name" />
+
+        <label for="new__mobile">Mobile</label>
+        <input type="text" id="new__mobile" />
+
+        <label for="new__email">Email</label>
+        <input type="text" id="new__email" />
+
+        <label for="new__address">Address</label>
+        <input type="text" id="new__address" />
+
+        <button class="cancel__new__contact">Save</button>
+        <button class="submit__new__contact">Cancel</button>
+      </div>
+      <div class="overlay hidden"></div>
+    </section>
+  </body>
+</html>
