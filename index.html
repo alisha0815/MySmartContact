@@ -45,7 +45,7 @@
         <div class="add__contact">
           <button class="add__btn">
             <i class="logo__icon fas fa-plus-circle"
-              ><span class="add___btn__text"> ADD</span></i
+              ><span class="add___btn__text">&nbspADD</span></i
             >
             <!-- <span class="add__btn__text">ADD</span> -->
           </button>
@@ -61,6 +61,7 @@
         </div>
       </div>
     </nav>
+
     <!-- contact list  -->
     <section class="container">
       <div class="contact__container">
@@ -68,13 +69,13 @@
         <div class="contact__header__row">
           <div class="contact__header__name">Name</div>
           <div class="contact__header__mobile">
-            <i class="fas fa-mobile-alt"></i> Mobile
+            <i class="fas fa-mobile-alt"></i>&nbspMobile
           </div>
           <div class="contact__header__email">
-            <i class="far fa-envelope"></i> Email
+            <i class="far fa-envelope"></i>&nbspEmail
           </div>
           <div class="contact__header__address">
-            <i class="fas fa-home"></i> Address
+            <i class="fas fa-home"></i>&nbspAddress
           </div>
           <div class="delete__btn__column"></div>
           <div class="edit__btn__column"></div>
@@ -109,7 +110,33 @@
             </button>
           </div>
 
-          <!-- first contact -->
+          <!-- second contact -->
+          <div class="details__contact">
+            <div class="avatar">
+              <span
+                class="
+                  avatar avatar-lg-32
+                  badge-secondary
+                  rounded-circle
+                  text-light
+                  p-1
+                "
+                >AG</span
+              >
+            </div>
+            <div class="contact__name">Alisha Greve</div>
+            <div class="contact__mobile">9854102</div>
+            <div class="contact__email">alisha</div>
+            <div class="contact__address">A0876 Oslo, Norway</div>
+            <button class="btn__icon delete__btn">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+            <button class="btn__icon edit__btn">
+              <i class="far fa-edit"></i>
+            </button>
+          </div>
+
+          <!-- third contact -->
           <div class="details__contact">
             <div class="avatar">
               <span
@@ -166,33 +193,122 @@
         </table>
       </div> -->
 
-      <!-- Add new contact -->
-      <div class="hey">
-        <h3>Add new contact</h3>
-        <label for="new__first__name">First Name</label>
-        <input type="text" id="new__fist__name" />
+      <!-- Modal - add new contact -->
 
-        <label for="new__last__name">Last Name</label>
-        <input type="text" id="new__last__name" />
+      <div class="simple-modal">
+        <div class="modal-content">
+          <div class="modal-title">
+            <p><i class="add-icon fas fa-user-plus"></i>&nbspAdd New Contact</p>
+          </div>
+          <button class="close-modal">&times;</button>
+          <div class="form-content">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputFirstName"
+                    ><i class="add-tag-icon far fa-id-badge"></i>&nbspFirst
+                    name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputFirstName"
+                    placeholder="First name"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputLastName">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputLastName"
+                    placeholder="Last name"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputTelephone"
+                  ><i class="add-tag-icon fas fa-phone-alt"></i
+                  >&nbspTelephone</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="inputTelephone"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="inputAddress"
+                  ><i class="add-tag-icon fas fa-location-arrow"></i
+                  >&nbspAddress</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="City, Apartment, studio, or floor"
+                />
+              </div>
+              <div class="form-group">
+                <label for="inputEmail"
+                  ><i class="add-tag-icon fas fa-at"></i>&nbspEmail</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <div class="btn-modal">
+                <button type="submit" class="new-contact-btn cancel-btn">
+                  Cancel
+                </button>
+                <button type="submit" class="new-contact-btn save-btn">
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- <button class="close-modal">&times;</button>
+          <h4>Add new contact</h4>
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" />
 
-        <label for="new__mobile">Mobile</label>
-        <input
-          type="tel"
-          id="new__mobile"
-          pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}"
-          required
-        />
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" />
 
-        <label for="new__email">Email</label>
-        <input type="email" id="new__email" />
+          <label for="mobile">Mobile</label>
+          <input
+            type="tel"
+            id="mobile"
+            pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}"
+            required
+          />
 
-        <label for="new__address">Address</label>
-        <input type="text" id="new__address" />
+          <label for="email">Email</label>
+          <input type="email" id="email" />
 
-        <button class="cancel__new__contact">Save</button>
-        <button class="submit__new__contact">Cancel</button>
+          <label for="address">Address</label>
+          <input type="text" id="address" />
+
+          <button class="save-btn">Save</button>
+          <button class="cancel-btn">Cancel</button> -->
+        </div>
       </div>
-      <div class="overlay hidden"></div>
     </section>
   </body>
 </html>

@@ -132,6 +132,11 @@
 
 .contacts__row {
   color: var(--text-color);
+  overflow-y: auto;
+}
+
+.details__contact {
+  margin-bottom: 30px;
 }
 
 .contact__header__name,
@@ -174,4 +179,101 @@
   border-radius: 20px;
   padding: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.simple-modal {
+  /* display: none; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  z-index: 10;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.form-content {
+  margin: 30px 20px;
+}
+
+.btn-modal {
+  text-align: center;
+}
+
+.cancel-btn,
+.save-btn {
+  height: 40px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  width: 20%;
+}
+
+.new-contact-btn {
+  color: var(--icon-color);
+  font-size: 20px;
+  border-style: none;
+  font-style: bolder;
+  padding: 5px;
+}
+
+.modal-title {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--icon-color);
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.add-icon {
+  color: var(--btn-icon-color);
+  font-size: 28px;
+}
+
+.add-tag-icon {
+  color: var(--header-color);
+  font-size: 18px;
+}
+
+.form-group {
+  font-size: 18px;
+  color: var(--icon-color);
+  font-weight: bolder;
+}
+
+.save-btn {
+  color: #fff;
+  font-size: 20px;
+  background-color: var(--btn-icon-color);
+}
+
+.cancel-btn {
+  color: var(--header-color);
+  font-size: 20px;
+  background-color: #fff;
+  border: 1px solid var(--header-color);
+}
+
+.save-btn:hover {
+  color: #fff;
+  background-color: var(--icon-color);
+  transition: transform 300ms ease-in;
+}
+
+.cancel-btn:hover {
+  color: #fff;
+  background-color: var(--header-color);
+  transition: transform 300ms ease-in;
 }
