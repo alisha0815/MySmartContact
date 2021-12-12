@@ -196,10 +196,17 @@
   top: 1.2rem;
   right: 2rem;
   font-size: 2rem;
-  color: #333;
+  color: #ccc;
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: var(--icon-color);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .form-content {
